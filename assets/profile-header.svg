@@ -1,21 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="300" viewBox="0 0 1000 300" role="img" aria-labelledby="title desc">
-  <title id="title">Sebastián Macías — Desarrollo de producto digital</title>
-  <desc id="desc">Aplicaciones, gestión y automatización para tu negocio.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="320" viewBox="0 0 1000 320" role="img" aria-labelledby="title desc">
+  <title id="title">Tomoya0k — Sebastián Macías</title>
+  <desc id="desc">Código, ideas y cosas que voy construyendo. Ilustración orbital en cian y violeta sobre fondo oscuro.</desc>
   <defs>
-    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#101e2a"/><stop offset="1" stop-color="#102f3a"/></linearGradient>
-    <linearGradient id="accent"><stop stop-color="#67e8f9"/><stop offset="1" stop-color="#bef264"/></linearGradient>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#101523"/><stop offset="1" stop-color="#19142b"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#6ee7f9"/><stop offset=".5" stop-color="#9c91ff"/><stop offset="1" stop-color="#d4a6ff"/></linearGradient>
+    <radialGradient id="halo"><stop stop-color="#7962de" stop-opacity=".22"/><stop offset="1" stop-color="#7962de" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#a7b5e3" stroke-opacity=".045"/></pattern>
+    <clipPath id="frame"><rect width="1000" height="320" rx="22"/></clipPath>
   </defs>
-  <rect width="1000" height="300" rx="22" fill="url(#background)"/>
-  <path d="M770 0v300M840 0v300M910 0v300M700 70h300M700 140h300M700 210h300" fill="none" stroke="#ffffff" stroke-opacity=".05"/>
-  <circle cx="912" cy="78" r="105" fill="none" stroke="#67e8f9" stroke-opacity=".15"/>
-  <circle cx="912" cy="78" r="71" fill="none" stroke="#bef264" stroke-opacity=".17"/>
-  <rect x="42" y="40" width="42" height="4" rx="2" fill="url(#accent)"/>
-  <g font-family="Segoe UI, Arial, sans-serif">
-    <text x="42" y="80" fill="#b9d6df" font-size="17" font-weight="600" letter-spacing="2">SEBASTIÁN MACÍAS</text>
-    <text x="42" y="141" fill="#f5fbff" font-size="43" font-weight="700">Software que trabaja</text>
-    <text x="42" y="193" fill="#f5fbff" font-size="43" font-weight="700">para tu negocio.</text>
-    <text x="44" y="253" fill="#9ee8df" font-size="19">APLICACIONES · GESTIÓN · AUTOMATIZACIÓN</text>
-    <rect x="792" y="213" width="164" height="42" rx="21" fill="#ffffff" fill-opacity=".07" stroke="#ffffff" stroke-opacity=".14"/>
-    <text x="874" y="240" text-anchor="middle" fill="#d7e7ed" font-size="16">IDEA → PRODUCTO</text>
+  <g clip-path="url(#frame)">
+    <rect width="1000" height="320" fill="url(#background)"/>
+    <rect width="1000" height="320" fill="url(#grid)"/>
+    <circle cx="825" cy="160" r="240" fill="url(#halo)"/>
+    <rect width="1000" height="3" fill="url(#accent)"/>
+    <g fill="none" stroke="url(#accent)">
+      <circle cx="828" cy="158" r="91" opacity=".3"/>
+      <circle cx="828" cy="158" r="65" opacity=".2"/>
+      <ellipse cx="828" cy="158" rx="132" ry="44" transform="rotate(-32 828 158)" opacity=".7"/>
+      <ellipse cx="828" cy="158" rx="132" ry="44" transform="rotate(48 828 158)" opacity=".38"/>
+      <path d="m828 119 34 39-34 39-34-39z" stroke-width="2"/>
+      <path d="m813 150-8 8 8 8m30-16 8 8-8 8m-19 8 8-32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <circle cx="939" cy="98" r="5" fill="#75e1f3"/>
+    <circle cx="760" cy="61" r="3" fill="#c3a0ff"/>
+    <path d="M699 226v12m-6-6h12M942 244v10m-5-5h10" stroke="#aaa1e8" stroke-width="1.5"/>
+    <g font-family="Segoe UI, Arial, sans-serif">
+      <text x="48" y="61" fill="#98a4c5" font-size="14" font-weight="600" letter-spacing="3">PERSONAL SPACE / GITHUB</text>
+      <text x="43" y="150" fill="#f3f2ff" font-size="78" font-weight="800" letter-spacing="-3">TOMOYA0K<tspan fill="#7ce5ef">.</tspan></text>
+      <text x="48" y="189" fill="#c9c6e4" font-size="22">Sebastián Macías</text>
+      <text x="48" y="242" fill="#a1aec9" font-size="19">Código, ideas y cosas que voy construyendo.</text>
+      <text x="48" y="284" fill="#82d5df" font-family="Consolas, monospace" font-size="13" letter-spacing="1">&gt; build · break · learn · repeat _</text>
+    </g>
   </g>
 </svg>
