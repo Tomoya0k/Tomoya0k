@@ -1,36 +1,54 @@
 import {writeFile} from 'node:fs/promises';
-const esc=value=>value.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');
+import {pixelText, sprite, frame, heart, star} from './pixel-art.mjs';
+
 const icons={
-  gym:'<path d="M12 32h40M14 20v24M22 15v34M42 15v34M50 20v24"/>',
-  digital:'<rect x="12" y="12" width="16" height="16" rx="4"/><rect x="36" y="12" width="16" height="16" rx="4"/><rect x="12" y="36" width="16" height="16" rx="4"/><path d="M36 44h16m-8-8v16"/>',
-  sushi:'<ellipse cx="32" cy="32" rx="24" ry="16"/><ellipse cx="32" cy="32" rx="13" ry="8"/><path d="m45 6-9 17m20-13-12 17M8 32v10c0 21 48 21 48 0V32"/>',
-  portfolio:'<rect x="6" y="10" width="52" height="44" rx="6"/><path d="M6 22h52m-42-6h1m7 0h1M25 32l-8 7 8 7m14-14 8 7-8 7"/>',
-  stellar:'<circle cx="32" cy="32" r="19"/><path d="m6 46 52-28M6 38 58 10"/>',
-  bot:'<rect x="10" y="20" width="44" height="34" rx="9"/><path d="M32 20V9m-5 0h10M4 32v12m56-12v12M22 32v4m20-4v4m-18 9h16"/>',
-  profile:'<path d="m23 14-17 18 17 18m18-36 17 18-17 18M36 10 28 54"/>'
+  gym:'...11......11.../..111......111../..111......111../1111111111111111/1111111111111111/..111......111../..111......111../...11......11...',
+  digital:'111111..111111/122221..122221/122221..122221/122221..122221/111111..111111/............../111111....11../122221....11../122221..111111/122221....11../111111....11..',
+  sushi:'...........11./..........11../....1111111.../..11222222211./.1223333322221/12233333332221/12223333322221/.122222222221./.111111111111./.122222222221./..1111111111..',
+  portfolio:'.111111111111./11222222222211/12121222222221/11111111111111/12222222222221/12212222212221/12122222221221/12212222212221/12222222222221/.111111111111.',
+  stellar:'......111...../....112211..11/...1222221111./..1222221111../..12221112221./..12111222221./..11122222221./.11122222221../11..1222221.../.....11111....',
+  bot:'......11....../.....1111...../......11....../..1111111111../.112222222211./11223322332211/11223322332211/11222222222211/.122333333221./..1111111111../...11....11...',
+  profile:'.....11......./..11.11..11.../.11..11...11../11...11....11./.11..11...11../..11.11..11.../.....11.......'
 };
 const cards=[
-  ['gimnexa','Gimnexa','TRAINING / PROGRESS','Rutinas, sesiones y progreso.','TypeScript · React · Supabase','#b7ef76','gym','PRIVADO'],
-  ['digital','Digital.A','DESIGN / OPERATIONS','Cotizaciones, gestión y producción.','JavaScript · React · Supabase','#ffb074','digital','PRIVADO'],
-  ['sushi','FoodGate Sushi','FOOD / MOBILE FIRST','Un menú digital para explorar.','JavaScript · React · Vite','#ff85bb','sushi','PRIVADO'],
-  ['portfolio','portafolio-web','DESIGN / PERSONAL SPACE','Proyectos, diseño y experimentos.','TypeScript · React · Tailwind','#6de1ff','portfolio','PRIVADO'],
-  ['stellargate','StellarGate','FORK / STELLAR','Pasarela de pagos sobre Stellar.','Rust · Axum · SQLite','#b59aff','stellar','FORK'],
-  ['open-stellar','Open-Stellar','FORK / AI EXPLORATION','Un bot con IA en la nube.','TypeScript · Cloudflare · Groq','#ffe08a','bot','FORK'],
-  ['profile','Tomoya0k','YOU ARE HERE','El laboratorio visual de este perfil.','Markdown · SVG · JavaScript','#81f0d4','profile','PÚBLICO']
+  ['gimnexa','GIMNEXA','#c2f279','gym','PRIVADO'],
+  ['digital','DIGITAL.A','#ffaf74','digital','PRIVADO'],
+  ['sushi','FOODGATE SUSHI','#ff85bb','sushi','PRIVADO'],
+  ['portfolio','PORTAFOLIO-WEB','#6ee3ff','portfolio','PRIVADO'],
+  ['stellargate','STELLARGATE','#bd9aff','stellar','FORK'],
+  ['open-stellar','OPEN-STELLAR','#ffe08a','bot','FORK'],
+  ['profile','TOMOYA0K','#81f0d4','profile','PUBLICO']
 ];
-for(const [file,title,kicker,description,stack,color,icon,status] of cards){
-  const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="480" height="252" viewBox="0 0 480 252" role="img" aria-labelledby="title desc"><title id="title">${title} · ${status}</title><desc id="desc">${description} ${stack}</desc>
-  <defs><radialGradient id="glow"><stop stop-color="${color}" stop-opacity=".18"/><stop offset="1" stop-color="${color}" stop-opacity="0"/></radialGradient></defs>
-  <rect x="1" y="1" width="478" height="250" rx="19" fill="#111827" stroke="#30344c"/><circle cx="421" cy="54" r="130" fill="url(#glow)"/>
-  <path d="M26 2H454" stroke="${color}" stroke-width="3"/>
-  <g font-family="Segoe UI,Arial,sans-serif"><text x="24" y="39" fill="${color}" font-size="11" letter-spacing="1.8">${kicker}</text>
-  <g transform="translate(383 50)" fill="none" stroke="${color}" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round">${icons[icon]}</g>
-  <text x="24" y="96" fill="#f2f5ff" font-size="32" font-weight="750">${title}</text>
-  <text x="24" y="132" fill="#acbad0" font-size="17">${description}</text><text x="24" y="164" fill="${color}" font-size="13">${stack}</text>
-  <path d="M24 187H456" stroke="#2b354b"/><rect x="24" y="204" width="94" height="26" rx="13" fill="${color}" fill-opacity=".12"/>
-  <text x="71" y="221" text-anchor="middle" fill="${color}" font-size="11" font-weight="700" letter-spacing="1">${status}</text><text x="437" y="224" fill="${color}" font-size="26">↗</text></g></svg>\n`;
-  await writeFile(new URL(`../assets/project-${file}.svg`,import.meta.url),svg);
+const wrap=(w,h,title,body)=>`<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-label="${title}"><title>${title}</title>${body}</svg>\n`;
+for(const [file,title,color,icon,status] of cards){
+  await writeFile(new URL(`../assets/project-${file}.svg`,import.meta.url),wrap(480,224,`${title} · ${status}`,
+    frame(480,224,color)+
+    '<path d="M24 136H456" stroke="#2c2646" stroke-width="2"/><path d="M316 28H456V66H316Z" fill="#211d36"/>'+
+    sprite(icons[icon],28,30,7,{'1':color,'2':'#2a2640','3':'#fff4e0'})+
+    pixelText(status,328,40,1.5,color)+pixelText(title,28,160,3)+pixelText('>',432,164,3,color)
+  ));
 }
-const tech=[['⚛','React','#6de1ff'],['TS','TypeScript','#85b5ff'],['JS','JavaScript','#f7dd76'],['S','Supabase','#84edbc'],['PG','PostgreSQL','#99baff'],['Py','Python','#f7cb79'],['API','FastAPI','#6ee3cd'],['BI','Power BI','#f9d970'],['CF','Cloudflare','#ffae7c'],['▲','Vercel','#dedaf3']];
-await writeFile(new URL('../assets/tech-panel.svg',import.meta.url),`<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="265" viewBox="0 0 1000 265" role="img" aria-label="Panel de tecnologías: ${tech.map(t=>t[1]).join(', ')}"><rect x="1" y="1" width="998" height="263" rx="20" fill="#111827" stroke="#30344c"/><g font-family="Segoe UI,Arial,sans-serif"><text x="30" y="38" fill="#95a9cc" font-size="13" letter-spacing="3">TECH / LOADOUT</text>${tech.map(([symbol,label,color],i)=>{const x=30+(i%5)*190,y=57+Math.floor(i/5)*94;return `<g transform="translate(${x} ${y})"><rect width="180" height="80" rx="12" fill="#1b2337" stroke="#303b53"/><rect x="12" y="14" width="45" height="45" rx="11" fill="${color}" fill-opacity=".12"/><text x="34.5" y="43" fill="${color}" text-anchor="middle" font-size="${symbol.length>2?16:22}" font-weight="700">${esc(symbol)}</text><text x="68" y="41" fill="#e4e9f6" font-size="14" font-weight="600">${label}</text><path d="M68 52h88" stroke="${color}" stroke-opacity=".45" stroke-width="2"/></g>`;}).join('')}</g></svg>\n`);
-console.log('Tarjetas de los siete repositorios y panel de tecnologías generados.');
+
+const tech=[['REACT','#6ee3ff'],['TYPESCRIPT','#85b5ff'],['JAVASCRIPT','#f7dd76'],['SUPABASE','#84edbc'],['POSTGRESQL','#99baff'],['PYTHON','#f7cb79'],['FASTAPI','#6ee3cd'],['POWER BI','#f9d970'],['CLOUDFLARE','#ffae7c'],['VERCEL','#dedaf3']];
+await writeFile(new URL('../assets/tech-panel.svg',import.meta.url),wrap(1000,230,'Tecnologías',
+  frame(1000,230)+pixelText('INVENTARIO',30,26,2,'#c2b1fa')+
+  tech.map(([label,color],i)=>{
+    const x=30+(i%5)*190,y=65+Math.floor(i/5)*76;
+    return `<g transform="translate(${x} ${y})">${frame(180,60,'#38304f','#1b182c')}<rect x="12" y="17" width="8" height="8" fill="${color}"/><rect x="16" y="25" width="8" height="8" fill="${color}"/>${pixelText(label,32,23,2,color)}</g>`;
+  }).join('')
+));
+
+const robot='......1111....../......1221....../.......11......./..111111111111../.11222222222211./1122222222222211/1222332222332221/1222332222332221/1222222222222221/1222223333222221/.11222222222211./..111111111111../....11....11..../...111....111...';
+await writeFile(new URL('../assets/profile-header.svg',import.meta.url),wrap(1000,320,'Tomoya0k · 8-bit',
+  '<style>.float{animation:hop 3s steps(2,end) infinite}.blink{animation:blink 2s steps(2,end) infinite}@keyframes hop{50%{transform:translateY(-8px)}}@keyframes blink{50%{opacity:.35}}@media(prefers-reduced-motion:reduce){.float,.blink{animation:none}}</style>'+
+  frame(1000,320,'#9a83e8')+
+  '<path d="M28 64H972M28 268H972" stroke="#38304f" stroke-width="4"/>'+
+  pixelText('PLAYER 01',32,28,2,'#bca8ed')+
+  [0,1,2].map(i=>sprite(heart,854+i*38,26,4,{'1':'#ff85bb'})).join('')+
+  pixelText('TOMOYA0K',44,113,10,'#423063')+pixelText('TOMOYA0K',40,107,10,'#f4efff')+
+  `<g class="blink">${pixelText('>',40,208,3,'#c2f279')}</g>`+pixelText('PRESS START',74,208,3,'#c2f279')+
+  `<g class="float">${sprite(robot,764,104,9,{'1':'#ae91eb','2':'#3c325e','3':'#86f0d2'})}</g>`+
+  sprite(star,681,99,4,{'1':'#ffe08a'})+sprite(star,944,218,3,{'1':'#6ee3ff'})+
+  Array.from({length:23},(_,i)=>`<rect x="${32+i*41}" y="287" width="25" height="6" fill="${['#6ee3ff','#bd9aff','#ff85bb','#ffe08a','#c2f279'][Math.floor(i/5)]}"/>`).join('')
+));
+console.log('Portada, siete tarjetas e inventario 8-bit generados.');

@@ -1,5 +1,6 @@
 import {writeFile} from 'node:fs/promises';
 import {pathToFileURL} from 'node:url';
+import {frame,pixelText} from './pixel-art.mjs';
 
 export function parseCalendar(html) {
   const tips=new Map([...html.matchAll(/<tool-tip\b([^>]*)>([\s\S]*?)<\/tool-tip>/g)].map(([,attrs,text])=>[attrs.match(/\bfor="([^"]+)"/)?.[1],text.replace(/<[^>]+>/g,'').trim()]));
@@ -20,28 +21,26 @@ export function renderCalendar(days) {
   const total=days.reduce((sum,day)=>sum+day.count,0),active=days.filter(day=>day.count>0).length,peak=Math.max(...days.map(day=>day.count));
   const colors=['#61dcff','#8585ff','#bb87ff','#ef83c6','#ffba72','#d4ea79'];
   const start=Date.parse(days[0].date),offset=new Date(start).getUTCDay();
-  const weeks=Math.ceil((offset+days.length)/7),step=Math.min(16.8,886/weeks),left=65,top=165;
+  const weeks=Math.ceil((offset+days.length)/7),step=Math.min(16.8,886/weeks),left=72,top=160;
   const months=['ENE','FEB','MAR','ABR','MAY','JUN','JUL','AGO','SEP','OCT','NOV','DIC'];
   const labels=[];
   const squares=days.map((day,index)=>{
     const date=new Date(`${day.date}T00:00:00Z`),week=Math.floor((index+offset)/7),weekday=date.getUTCDay();
-    if(date.getUTCDate()===1)labels.push(`<text x="${left+week*step}" y="149">${months[date.getUTCMonth()]}</text>`);
+    if(date.getUTCDate()===1)labels.push(pixelText(months[date.getUTCMonth()],left+week*step,138,1.5,'#a99ec4'));
     const hue=colors[Math.min(colors.length-1,Math.floor(week/weeks*colors.length))];
-    return `<rect x="${left+week*step}" y="${top+weekday*18}" width="12.5" height="12.5" rx="3" fill="${day.count?hue:'#242b40'}" opacity="${day.count?[0,.4,.6,.8,1][day.level]||.4:1}"><title>${day.date}: ${day.count} contribuciones</title></rect>`;
+    return `<rect x="${Math.round(left+week*step)}" y="${top+weekday*18}" width="12" height="12" fill="${day.count?hue:'#2c263f'}" opacity="${day.count?[0,.4,.6,.8,1][day.level]||.4:1}"><title>${day.date}: ${day.count} contribuciones</title></rect>`;
   }).join('');
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="370" viewBox="0 0 1000 370" role="img" aria-labelledby="title desc">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="350" viewBox="0 0 1000 350" role="img" aria-labelledby="title desc">
   <title id="title">Actividad pública de Tomoya0k: ${total} contribuciones</title><desc id="desc">Calendario del ${days[0].date} al ${days.at(-1).date}. ${active} días activos. Los colores representan semanas y su intensidad indica actividad.</desc>
-  <defs><linearGradient id="edge"><stop stop-color="#61dcff"/><stop offset=".45" stop-color="#bb87ff"/><stop offset=".7" stop-color="#ef83c6"/><stop offset="1" stop-color="#d4ea79"/></linearGradient></defs>
-  <rect x="1" y="1" width="998" height="368" rx="20" fill="#111827" stroke="#30344c"/>
-  <path d="M25 2H975" stroke="url(#edge)" stroke-width="3"/>
-  <g font-family="Segoe UI,Arial,sans-serif"><text x="36" y="43" fill="#93a5c9" font-size="13" letter-spacing="3">ACTIVITY / SPECTRUM</text>
-  ${[[total,'CONTRIBUCIONES'],[active,'DÍAS ACTIVOS'],[peak,'MÁXIMO EN UN DÍA']].map(([value,label],i)=>`<text x="${36+i*315}" y="89" fill="${colors[i*2]}" font-size="34" font-weight="700">${value}</text><text x="${36+i*315}" y="114" fill="#9aaac5" font-size="12" letter-spacing="1.4">${label}</text>`).join('')}
-  <g fill="#91a2be" font-size="11">${labels.join('')}<text x="28" y="194">LUN</text><text x="28" y="230">MIÉ</text><text x="28" y="266">VIE</text></g>
-  ${squares}
-  <path d="M36 308H964" stroke="#2b354b"/>
-  <text x="36" y="337" fill="#9aaac5" font-size="12">Actividad real visible en GitHub · ${days.at(-1).date}</text>
-  <text x="660" y="337" fill="#9aaac5" font-size="12">menos</text>${[0,.4,.6,.8,1].map((opacity,i)=>`<rect x="${712+i*21}" y="325" width="13" height="13" rx="3" fill="${opacity?'#bb87ff':'#242b40'}" opacity="${opacity||1}"/>`).join('')}<text x="824" y="337" fill="#9aaac5" font-size="12">más actividad</text>
-  </g></svg>\n`;
+  ${frame(1000,350,'#8575db','#141225')}
+  ${pixelText('ACTIVIDAD',36,28,3,'#f4efff')}
+  ${[[total,'CONTRIBUCIONES'],[active,'DIAS ACTIVOS'],[peak,'MAX DIARIO']].map(([value,label],i)=>pixelText(value,36+i*315,70,4,colors[i*2])+pixelText(label,36+i*315,108,1.5,'#a99ec4')).join('')}
+  ${labels.join('')}${[['LUN',178],['MIE',214],['VIE',250]].map(([label,y])=>pixelText(label,28,y,1.5,'#a99ec4')).join('')}
+  <g shape-rendering="crispEdges">${squares}</g>
+  <path d="M36 297H964" stroke="#352c4b" stroke-width="2"/>
+  ${pixelText(days.at(-1).date,36,316,1.5,'#a99ec4')}
+  ${pixelText('-',752,315,2,'#a99ec4')}${[0,.4,.6,.8,1].map((opacity,i)=>`<rect x="${781+i*22}" y="315" width="14" height="14" fill="${opacity?'#bb87ff':'#2c263f'}" opacity="${opacity||1}"/>`).join('')}${pixelText('+',906,315,2,'#a99ec4')}
+  </svg>\n`;
 }
 
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href) {
