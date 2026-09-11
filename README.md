@@ -4,7 +4,7 @@
 
 <p align="center">
   <strong>Crear. Romper. Entender. Volver a crear.</strong><br />
-  <sub>Mi pequeño rincón de internet, entre interfaces, aplicaciones y experimentos.</sub>
+  <sub>Interfaces, aplicaciones y experimentos. Este es mi pequeño rincón de internet.</sub>
 </p>
 
 <p align="center">
@@ -13,63 +13,58 @@
   <a href="https://github.com/Tomoya0k?tab=repositories">⌘ Repositorios</a>
 </p>
 
----
+### ◈ Activity spectrum
 
-### / sobre mí
+<p align="center">
+  <img src="./assets/activity.svg" alt="Mi calendario multicolor de contribuciones públicas reales, con total de actividad, días activos y máximo diario." width="100%" />
+</p>
 
-Soy **Sebastián**, por aquí **Tomoya0k**. Este perfil reúne las cosas que voy construyendo: aplicaciones, interfaces, herramientas y alguna que otra idea que terminó convirtiéndose en un repositorio.
+<sub>Una versión personalizada de mi actividad pública. La fecha de la imagen indica su última actualización; el calendario original de GitHub se conserva debajo del perfil.</sub>
 
-Me gusta que lo que hago funcione bien **y también se vea chulo**.
-
-### / mis proyectos
+### ◉ Project collection
 
 <table>
   <tr>
-    <td width="50%" valign="top">
-      <h3>◈ <a href="https://github.com/Tomoya0k/Gimnexa">Gimnexa</a></h3>
-      <p>Entrenamientos, rutinas e historial de progreso en una app pensada para llevar en el bolsillo.</p>
-      <p><code>TypeScript</code> <code>React</code> <code>Supabase</code></p>
-      <sub>Repositorio privado</sub>
-    </td>
-    <td width="50%" valign="top">
-      <h3>◉ <a href="https://github.com/Tomoya0k/Digital.A">Digital.A</a></h3>
-      <p>El universo de Grupo Digital: web, cotizaciones, administración y producción.</p>
-      <p><code>JavaScript</code> <code>React</code> <code>Supabase</code></p>
-      <sub>Repositorio privado</sub>
-    </td>
+    <td width="50%"><a href="https://github.com/Tomoya0k/Gimnexa"><img src="./assets/project-gimnexa.svg" alt="Gimnexa — entrenamientos y progreso. TypeScript, React y Supabase. Repositorio privado." width="100%" /></a></td>
+    <td width="50%"><a href="https://github.com/Tomoya0k/Digital.A"><img src="./assets/project-digital.svg" alt="Digital.A — cotizaciones, gestión y producción. JavaScript, React y Supabase. Repositorio privado." width="100%" /></a></td>
   </tr>
   <tr>
-    <td width="50%" valign="top">
-      <h3>◎ <a href="https://github.com/Tomoya0k/foodgate-sushi-menu">FoodGate Sushi</a></h3>
-      <p>Un menú digital mobile-first: categorías, platillos y una interfaz centrada en la comida.</p>
-      <p><code>JavaScript</code> <code>React</code> <code>Vite</code></p>
-      <sub>Repositorio privado</sub>
-    </td>
-    <td width="50%" valign="top">
-      <h3>↗ <a href="https://github.com/Tomoya0k/portafolio-web">portafolio-web</a></h3>
-      <p>Mi espacio para reunir proyectos, explorar diseño y contar un poco de lo que hago.</p>
-      <p><code>TypeScript</code> <code>React</code> <code>Tailwind CSS</code></p>
-      <sub>Repositorio privado · <a href="https://portafolio-web-eta-six.vercel.app/">Ver en vivo</a></sub>
-    </td>
+    <td width="50%"><a href="https://github.com/Tomoya0k/foodgate-sushi-menu"><img src="./assets/project-sushi.svg" alt="FoodGate Sushi — menú digital mobile-first. JavaScript, React y Vite. Repositorio privado." width="100%" /></a></td>
+    <td width="50%"><a href="https://github.com/Tomoya0k/portafolio-web"><img src="./assets/project-portfolio.svg" alt="portafolio-web — proyectos y diseño. TypeScript, React y Tailwind. Repositorio privado." width="100%" /></a></td>
   </tr>
 </table>
 
-**✦ [Tomoya0k](https://github.com/Tomoya0k/Tomoya0k)** — El perfil que estás viendo: Markdown, SVG y detalles visuales. `Público`
+<p align="center">
+  <a href="https://github.com/Tomoya0k/Tomoya0k"><img src="./assets/project-profile.svg" alt="Tomoya0k — el laboratorio visual de este perfil. Repositorio público." width="49%" /></a>
+</p>
 
-<sub>Los repositorios privados están incluidos como parte de mi colección. Sus enlaces solo funcionan si tienes acceso; su código sigue siendo privado.</sub>
+<sub>Los proyectos privados forman parte de mi colección, pero su código sigue siendo privado. Sus enlaces requieren acceso. Mi <a href="https://portafolio-web-eta-six.vercel.app/">portafolio sí se puede visitar</a>.</sub>
 
-### / exploraciones y forks
+### ⌘ Forks / explorations
 
-También forman parte de mi cuenta. Son forks de proyectos de otros autores, no proyectos originales míos.
+<table>
+  <tr>
+    <td width="50%"><a href="https://github.com/Tomoya0k/StellarGate"><img src="./assets/project-stellargate.svg" alt="StellarGate — fork de una pasarela de pagos sobre Stellar, con Rust." width="100%" /></a></td>
+    <td width="50%"><a href="https://github.com/Tomoya0k/Open-Stellar"><img src="./assets/project-open-stellar.svg" alt="Open-Stellar — fork de un bot con IA en Cloudflare Workers, con TypeScript." width="100%" /></a></td>
+  </tr>
+</table>
 
-| Repositorio | De qué va | Proyecto original |
-| :--- | :--- | :--- |
-| [StellarGate](https://github.com/Tomoya0k/StellarGate) | Pasarela de pagos sobre Stellar · `Rust` | [StellarGateLabs/StellarGate](https://github.com/StellarGateLabs/StellarGate) |
-| [Open-Stellar](https://github.com/Tomoya0k/Open-Stellar) | Bot con IA en Cloudflare Workers · `TypeScript` | [Bitcoindefi/Open-Stellar](https://github.com/Bitcoindefi/Open-Stellar) |
+<sub>Proyectos originales: <a href="https://github.com/StellarGateLabs/StellarGate">StellarGateLabs/StellarGate</a> y <a href="https://github.com/Bitcoindefi/Open-Stellar">Bitcoindefi/Open-Stellar</a>. Los forks no son proyectos originales míos.</sub>
 
-### / herramientas que aparecen por aquí
+### ⚡ Tech loadout
 
-`React` `TypeScript` `JavaScript` `Supabase` `PostgreSQL` `Python` `FastAPI` `Power BI` `Cloudflare` `Vercel`
+<p align="center">
+  <img src="./assets/tech-panel.svg" alt="React, TypeScript, JavaScript, Supabase, PostgreSQL, Python, FastAPI, Power BI, Cloudflare y Vercel." width="100%" />
+</p>
+
+<details>
+  <summary><strong>Un poco sobre mí</strong></summary>
+
+Soy **Sebastián**, por aquí **Tomoya0k**. Voy construyendo aplicaciones, interfaces, herramientas y alguna que otra idea que terminó convirtiéndose en un repositorio.
+
+Me gusta que lo que hago funcione bien **y también se vea chulo**.
+
+</details>
 
 ---
 

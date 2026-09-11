@@ -8,12 +8,19 @@
     <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#a7b5e3" stroke-opacity=".045"/></pattern>
     <clipPath id="frame"><rect width="1000" height="320" rx="22"/></clipPath>
   </defs>
+  <style>
+    .orbital{transform-origin:828px 158px;animation:orbit 32s linear infinite}
+    .spark{animation:twinkle 4s ease-in-out infinite alternate}
+    @keyframes orbit{to{transform:rotate(360deg)}}
+    @keyframes twinkle{from{opacity:.3}to{opacity:1}}
+    @media(prefers-reduced-motion:reduce){.orbital,.spark{animation:none}}
+  </style>
   <g clip-path="url(#frame)">
     <rect width="1000" height="320" fill="url(#background)"/>
     <rect width="1000" height="320" fill="url(#grid)"/>
     <circle cx="825" cy="160" r="240" fill="url(#halo)"/>
     <rect width="1000" height="3" fill="url(#accent)"/>
-    <g fill="none" stroke="url(#accent)">
+    <g class="orbital" fill="none" stroke="url(#accent)">
       <circle cx="828" cy="158" r="91" opacity=".3"/>
       <circle cx="828" cy="158" r="65" opacity=".2"/>
       <ellipse cx="828" cy="158" rx="132" ry="44" transform="rotate(-32 828 158)" opacity=".7"/>
@@ -21,7 +28,7 @@
       <path d="m828 119 34 39-34 39-34-39z" stroke-width="2"/>
       <path d="m813 150-8 8 8 8m30-16 8 8-8 8m-19 8 8-32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </g>
-    <circle cx="939" cy="98" r="5" fill="#75e1f3"/>
+    <circle class="spark" cx="939" cy="98" r="5" fill="#75e1f3"/>
     <circle cx="760" cy="61" r="3" fill="#c3a0ff"/>
     <path d="M699 226v12m-6-6h12M942 244v10m-5-5h10" stroke="#aaa1e8" stroke-width="1.5"/>
     <g font-family="Segoe UI, Arial, sans-serif">

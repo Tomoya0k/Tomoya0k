@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="252" viewBox="0 0 480 252" role="img" aria-labelledby="title desc"><title id="title">StellarGate · FORK</title><desc id="desc">Pasarela de pagos sobre Stellar. Rust · Axum · SQLite</desc>
+  <defs><radialGradient id="glow"><stop stop-color="#b59aff" stop-opacity=".18"/><stop offset="1" stop-color="#b59aff" stop-opacity="0"/></radialGradient></defs>
+  <rect x="1" y="1" width="478" height="250" rx="19" fill="#111827" stroke="#30344c"/><circle cx="421" cy="54" r="130" fill="url(#glow)"/>
+  <path d="M26 2H454" stroke="#b59aff" stroke-width="3"/>
+  <g font-family="Segoe UI,Arial,sans-serif"><text x="24" y="39" fill="#b59aff" font-size="11" letter-spacing="1.8">FORK / STELLAR</text>
+  <g transform="translate(383 50)" fill="none" stroke="#b59aff" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><circle cx="32" cy="32" r="19"/><path d="m6 46 52-28M6 38 58 10"/></g>
+  <text x="24" y="96" fill="#f2f5ff" font-size="32" font-weight="750">StellarGate</text>
+  <text x="24" y="132" fill="#acbad0" font-size="17">Pasarela de pagos sobre Stellar.</text><text x="24" y="164" fill="#b59aff" font-size="13">Rust · Axum · SQLite</text>
+  <path d="M24 187H456" stroke="#2b354b"/><rect x="24" y="204" width="94" height="26" rx="13" fill="#b59aff" fill-opacity=".12"/>
+  <text x="71" y="221" text-anchor="middle" fill="#b59aff" font-size="11" font-weight="700" letter-spacing="1">FORK</text><text x="437" y="224" fill="#b59aff" font-size="26">↗</text></g></svg>
