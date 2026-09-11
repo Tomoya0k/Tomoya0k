@@ -3,9 +3,9 @@
 </p>
 
 <p align="center">
-  <a href="https://portafolio-web-eta-six.vercel.app/"><strong>Ver proyectos y casos de estudio ↗</strong></a>
+  <a href="https://wa.me/524741529605?text=Hola%20Sebasti%C3%A1n%2C%20vi%20tu%20perfil%20en%20GitHub%20y%20quiero%20consultarte%20sobre%20un%20proyecto."><strong>Hablemos por WhatsApp ↗</strong></a>
   &nbsp; · &nbsp;
-  <a href="https://portafolio-web-eta-six.vercel.app/#contact">Hablemos de tu proyecto</a>
+  <a href="https://portafolio-web-eta-six.vercel.app/">Ver proyectos y casos de estudio</a>
 </p>
 
 ## Tu negocio, con herramientas hechas a su medida
@@ -50,4 +50,6 @@ La elección depende de lo que necesita tu negocio; no hace falta que llegues co
 
 Cuéntame **qué hace tu negocio, qué necesitas resolver y para cuándo lo necesitas**. Con eso podemos conversar sobre el alcance de una primera versión.
 
-**[Ver mi portafolio y contactar →](https://portafolio-web-eta-six.vercel.app/#contact)**
+**[Cuéntame tu proyecto por WhatsApp →](https://wa.me/524741529605?text=Hola%20Sebasti%C3%A1n%2C%20vi%20tu%20perfil%20en%20GitHub%20y%20quiero%20consultarte%20sobre%20un%20proyecto.)**
+
+WhatsApp: **+52 474 152 9605** · [Ver portafolio](https://portafolio-web-eta-six.vercel.app/)
