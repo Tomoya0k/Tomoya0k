@@ -24,7 +24,7 @@ const glyphs = {
   ' ':'00000/00000/00000/00000/00000/00000/00000'
 };
 export const escapeXml = value => String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
-export function pixelText(value,x,y,size=2,color='#f4efff') {
+export function pixelText(value,x,y,size=2,color='#fff1f3') {
   const text=String(value).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toUpperCase();
   let path='';
   for(const [i,char] of [...text].entries()) {
@@ -38,7 +38,7 @@ export function pixelText(value,x,y,size=2,color='#f4efff') {
 export function sprite(rows,x,y,size,palette) {
   return `<g shape-rendering="crispEdges">${rows.split('/').flatMap((row,dy)=>[...row].map((pixel,dx)=>palette[pixel]?`<rect x="${x+dx*size}" y="${y+dy*size}" width="${size}" height="${size}" fill="${palette[pixel]}"/>`:'')).join('')}</g>`;
 }
-export function frame(width,height,accent='#8575db',background='#141225') {
+export function frame(width,height,accent='#b91c3b',background='#09090b') {
   return `<path d="M12 2H${width-12}V12H${width-2}V${height-12}H${width-12}V${height-2}H12V${height-12}H2V12H12Z" fill="${background}" stroke="${accent}" stroke-width="4"/><path d="M16 8H${width-16}M8 16V${height-16}" fill="none" stroke="#ffffff" stroke-opacity=".12" stroke-width="4"/>`;
 }
 export const heart='0110110/1111111/1111111/0111110/0011100/0001000';

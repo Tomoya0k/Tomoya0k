@@ -19,27 +19,27 @@ export function parseCalendar(html) {
 
 export function renderCalendar(days) {
   const total=days.reduce((sum,day)=>sum+day.count,0),active=days.filter(day=>day.count>0).length,peak=Math.max(...days.map(day=>day.count));
-  const colors=['#61dcff','#8585ff','#bb87ff','#ef83c6','#ffba72','#d4ea79'];
+  const colors=['#241218','#65162a','#a51d3d','#df2b50','#ff657c'];
+  const statColors=['#ff657c','#ef405d','#ff91a1'];
   const start=Date.parse(days[0].date),offset=new Date(start).getUTCDay();
   const weeks=Math.ceil((offset+days.length)/7),step=Math.min(16.8,886/weeks),left=72,top=160;
   const months=['ENE','FEB','MAR','ABR','MAY','JUN','JUL','AGO','SEP','OCT','NOV','DIC'];
   const labels=[];
   const squares=days.map((day,index)=>{
     const date=new Date(`${day.date}T00:00:00Z`),week=Math.floor((index+offset)/7),weekday=date.getUTCDay();
-    if(date.getUTCDate()===1)labels.push(pixelText(months[date.getUTCMonth()],left+week*step,138,1.5,'#a99ec4'));
-    const hue=colors[Math.min(colors.length-1,Math.floor(week/weeks*colors.length))];
-    return `<rect x="${Math.round(left+week*step)}" y="${top+weekday*18}" width="12" height="12" fill="${day.count?hue:'#2c263f'}" opacity="${day.count?[0,.4,.6,.8,1][day.level]||.4:1}"><title>${day.date}: ${day.count} contribuciones</title></rect>`;
+    if(date.getUTCDate()===1)labels.push(pixelText(months[date.getUTCMonth()],left+week*step,138,1.5,'#c6a5ad'));
+    return `<rect x="${Math.round(left+week*step)}" y="${top+weekday*18}" width="12" height="12" fill="${colors[day.count?day.level||1:0]}" opacity="1"><title>${day.date}: ${day.count} contribuciones</title></rect>`;
   }).join('');
   return `<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="350" viewBox="0 0 1000 350" role="img" aria-labelledby="title desc">
-  <title id="title">Actividad pública de Tomoya0k: ${total} contribuciones</title><desc id="desc">Calendario del ${days[0].date} al ${days.at(-1).date}. ${active} días activos. Los colores representan semanas y su intensidad indica actividad.</desc>
-  ${frame(1000,350,'#8575db','#141225')}
-  ${pixelText('ACTIVIDAD',36,28,3,'#f4efff')}
-  ${[[total,'CONTRIBUCIONES'],[active,'DIAS ACTIVOS'],[peak,'MAX DIARIO']].map(([value,label],i)=>pixelText(value,36+i*315,70,4,colors[i*2])+pixelText(label,36+i*315,108,1.5,'#a99ec4')).join('')}
-  ${labels.join('')}${[['LUN',178],['MIE',214],['VIE',250]].map(([label,y])=>pixelText(label,28,y,1.5,'#a99ec4')).join('')}
+  <title id="title">Actividad pública de Tomoya0k: ${total} contribuciones</title><desc id="desc">Calendario del ${days[0].date} al ${days.at(-1).date}. ${active} días activos. La intensidad del carmesí indica actividad.</desc>
+  ${frame(1000,350,'#b91c3b','#09090b')}
+  ${pixelText('ACTIVIDAD',36,28,3,'#fff1f3')}
+  ${[[total,'CONTRIBUCIONES'],[active,'DIAS ACTIVOS'],[peak,'MAX DIARIO']].map(([value,label],i)=>pixelText(value,36+i*315,70,4,statColors[i])+pixelText(label,36+i*315,108,1.5,'#c6a5ad')).join('')}
+  ${labels.join('')}${[['LUN',178],['MIE',214],['VIE',250]].map(([label,y])=>pixelText(label,28,y,1.5,'#c6a5ad')).join('')}
   <g shape-rendering="crispEdges">${squares}</g>
-  <path d="M36 297H964" stroke="#352c4b" stroke-width="2"/>
-  ${pixelText(days.at(-1).date,36,316,1.5,'#a99ec4')}
-  ${pixelText('-',752,315,2,'#a99ec4')}${[0,.4,.6,.8,1].map((opacity,i)=>`<rect x="${781+i*22}" y="315" width="14" height="14" fill="${opacity?'#bb87ff':'#2c263f'}" opacity="${opacity||1}"/>`).join('')}${pixelText('+',906,315,2,'#a99ec4')}
+  <path d="M36 297H964" stroke="#342027" stroke-width="2"/>
+  ${pixelText(days.at(-1).date,36,316,1.5,'#c6a5ad')}
+  ${pixelText('-',752,315,2,'#c6a5ad')}${colors.map((color,i)=>`<rect x="${781+i*22}" y="315" width="14" height="14" fill="${color}" opacity="1"/>`).join('')}${pixelText('+',906,315,2,'#c6a5ad')}
   </svg>\n`;
 }
 

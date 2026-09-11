@@ -11,44 +11,44 @@ const icons={
   profile:'.....11......./..11.11..11.../.11..11...11../11...11....11./.11..11...11../..11.11..11.../.....11.......'
 };
 const cards=[
-  ['gimnexa','GIMNEXA','#c2f279','gym','PRIVADO'],
-  ['digital','DIGITAL.A','#ffaf74','digital','PRIVADO'],
-  ['sushi','FOODGATE SUSHI','#ff85bb','sushi','PRIVADO'],
-  ['portfolio','PORTAFOLIO-WEB','#6ee3ff','portfolio','PRIVADO'],
-  ['stellargate','STELLARGATE','#bd9aff','stellar','FORK'],
-  ['open-stellar','OPEN-STELLAR','#ffe08a','bot','FORK'],
-  ['profile','TOMOYA0K','#81f0d4','profile','PUBLICO']
+  ['gimnexa','GIMNEXA','#ff526c','gym','PRIVADO'],
+  ['digital','DIGITAL.A','#ef405d','digital','PRIVADO'],
+  ['sushi','FOODGATE SUSHI','#f43f5e','sushi','PRIVADO'],
+  ['portfolio','PORTAFOLIO-WEB','#ff7185','portfolio','PRIVADO'],
+  ['stellargate','STELLARGATE','#df3554','stellar','FORK'],
+  ['open-stellar','OPEN-STELLAR','#ff8796','bot','FORK'],
+  ['profile','TOMOYA0K','#f25370','profile','PUBLICO']
 ];
 const wrap=(w,h,title,body)=>`<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-label="${title}"><title>${title}</title>${body}</svg>\n`;
 for(const [file,title,color,icon,status] of cards){
   await writeFile(new URL(`../assets/project-${file}.svg`,import.meta.url),wrap(480,224,`${title} · ${status}`,
     frame(480,224,color)+
-    '<path d="M24 136H456" stroke="#2c2646" stroke-width="2"/><path d="M316 28H456V66H316Z" fill="#211d36"/>'+
-    sprite(icons[icon],28,30,7,{'1':color,'2':'#2a2640','3':'#fff4e0'})+
+    '<path d="M24 136H456" stroke="#342027" stroke-width="2"/><path d="M316 28H456V66H316Z" fill="#211016"/>'+
+    sprite(icons[icon],28,30,7,{'1':color,'2':'#260e16','3':'#fff1f3'})+
     pixelText(status,328,40,1.5,color)+pixelText(title,28,160,3)+pixelText('>',432,164,3,color)
   ));
 }
 
-const tech=[['REACT','#6ee3ff'],['TYPESCRIPT','#85b5ff'],['JAVASCRIPT','#f7dd76'],['SUPABASE','#84edbc'],['POSTGRESQL','#99baff'],['PYTHON','#f7cb79'],['FASTAPI','#6ee3cd'],['POWER BI','#f9d970'],['CLOUDFLARE','#ffae7c'],['VERCEL','#dedaf3']];
+const tech=[['REACT','#ff7185'],['TYPESCRIPT','#ff8293'],['JAVASCRIPT','#ff627b'],['SUPABASE','#f87185'],['POSTGRESQL','#ff7185'],['PYTHON','#ff8796'],['FASTAPI','#ff647d'],['POWER BI','#fb7185'],['CLOUDFLARE','#ff8192'],['VERCEL','#ffe0e6']];
 await writeFile(new URL('../assets/tech-panel.svg',import.meta.url),wrap(1000,230,'Tecnologías',
-  frame(1000,230)+pixelText('INVENTARIO',30,26,2,'#c2b1fa')+
+  frame(1000,230)+pixelText('INVENTARIO',30,26,2,'#ff8293')+
   tech.map(([label,color],i)=>{
     const x=30+(i%5)*190,y=65+Math.floor(i/5)*76;
-    return `<g transform="translate(${x} ${y})">${frame(180,60,'#38304f','#1b182c')}<rect x="12" y="17" width="8" height="8" fill="${color}"/><rect x="16" y="25" width="8" height="8" fill="${color}"/>${pixelText(label,32,23,2,color)}</g>`;
+    return `<g transform="translate(${x} ${y})">${frame(180,60,'#3e1924','#130c10')}<rect x="12" y="17" width="8" height="8" fill="${color}"/><rect x="16" y="25" width="8" height="8" fill="${color}"/>${pixelText(label,32,23,2,color)}</g>`;
   }).join('')
 ));
 
 const robot='......1111....../......1221....../.......11......./..111111111111../.11222222222211./1122222222222211/1222332222332221/1222332222332221/1222222222222221/1222223333222221/.11222222222211./..111111111111../....11....11..../...111....111...';
 await writeFile(new URL('../assets/profile-header.svg',import.meta.url),wrap(1000,320,'Tomoya0k · 8-bit',
   '<style>.float{animation:hop 3s steps(2,end) infinite}.blink{animation:blink 2s steps(2,end) infinite}@keyframes hop{50%{transform:translateY(-8px)}}@keyframes blink{50%{opacity:.35}}@media(prefers-reduced-motion:reduce){.float,.blink{animation:none}}</style>'+
-  frame(1000,320,'#9a83e8')+
-  '<path d="M28 64H972M28 268H972" stroke="#38304f" stroke-width="4"/>'+
-  pixelText('PLAYER 01',32,28,2,'#bca8ed')+
-  [0,1,2].map(i=>sprite(heart,854+i*38,26,4,{'1':'#ff85bb'})).join('')+
-  pixelText('TOMOYA0K',44,113,10,'#423063')+pixelText('TOMOYA0K',40,107,10,'#f4efff')+
-  `<g class="blink">${pixelText('>',40,208,3,'#c2f279')}</g>`+pixelText('PRESS START',74,208,3,'#c2f279')+
-  `<g class="float">${sprite(robot,764,104,9,{'1':'#ae91eb','2':'#3c325e','3':'#86f0d2'})}</g>`+
-  sprite(star,681,99,4,{'1':'#ffe08a'})+sprite(star,944,218,3,{'1':'#6ee3ff'})+
-  Array.from({length:23},(_,i)=>`<rect x="${32+i*41}" y="287" width="25" height="6" fill="${['#6ee3ff','#bd9aff','#ff85bb','#ffe08a','#c2f279'][Math.floor(i/5)]}"/>`).join('')
+  frame(1000,320,'#b91c3b')+
+  '<path d="M28 64H972M28 268H972" stroke="#3e1924" stroke-width="4"/>'+
+  pixelText('PLAYER 01',32,28,2,'#c6a5ad')+
+  [0,1,2].map(i=>sprite(heart,854+i*38,26,4,{'1':'#f43f5e'})).join('')+
+  pixelText('TOMOYA0K',44,113,10,'#65162a')+pixelText('TOMOYA0K',40,107,10,'#fff1f3')+
+  `<g class="blink">${pixelText('>',40,208,3,'#ff526c')}</g>`+pixelText('PRESS START',74,208,3,'#ff526c')+
+  `<g class="float">${sprite(robot,764,104,9,{'1':'#dc2449','2':'#320d1a','3':'#ffe0e6'})}</g>`+
+  sprite(star,681,99,4,{'1':'#ff8796'})+sprite(star,944,218,3,{'1':'#ff7185'})+
+  Array.from({length:23},(_,i)=>`<rect x="${32+i*41}" y="287" width="25" height="6" fill="${['#ff7185','#df3554','#f43f5e','#ff8796','#ff526c'][Math.floor(i/5)]}"/>`).join('')
 ));
 console.log('Portada, siete tarjetas e inventario 8-bit generados.');

@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <img src="./assets/activity.svg" alt="Mi calendario multicolor de contribuciones públicas reales, con total de actividad, días activos y máximo diario." width="100%" />
+  <img src="./assets/activity.svg" alt="Mi calendario carmesí de contribuciones públicas reales, con total de actividad, días activos y máximo diario." width="100%" />
 </p>
 
 ### PROYECTOS
