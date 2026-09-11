@@ -62,7 +62,7 @@
 
 Soy **Sebastián**, por aquí **Tomoya0k**. Voy construyendo aplicaciones, interfaces, herramientas y alguna que otra idea que terminó convirtiéndose en un repositorio.
 
-Me gusta que lo que hago funcione bien **y también se vea chulo**.
+Me gusta que lo que hago funcione bien **y también se vea perron**.
 
 </details>
 
