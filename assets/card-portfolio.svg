@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="218" viewBox="0 0 600 218" role="img" aria-labelledby="title desc">
+<title id="title">Portafolio web</title><desc id="desc">Selección de proyectos y trabajo visual en una web personal. Privado.</desc>
+<rect x="1" y="1" width="598" height="216" rx="20" fill="#0E1726" stroke="#2A3B50" stroke-width="2"/>
+<path d="M20 2h155" stroke="#B9AAF3" stroke-width="3" stroke-linecap="round"/>
+<rect x="24" y="24" width="55" height="55" rx="14" fill="#B9AAF3" fill-opacity=".13" stroke="#B9AAF3" stroke-opacity=".35"/>
+<g fill="none" stroke="#B9AAF3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="28" y="31" width="40" height="33" rx="5"/><path d="M28 40h40m-27 7-6 6 6 6m14-12 6 6-6 6"/></g>
+<text x="95" y="60" fill="#F4F7FB" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="30">Portafolio web</text>
+<rect x="490" y="28" width="86" height="28" rx="14" fill="#B9AAF3" fill-opacity=".12" stroke="#B9AAF3" stroke-opacity=".5"/>
+<text x="533" y="47" text-anchor="middle" fill="#B9AAF3" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700">Privado</text>
+<text x="27" y="119" fill="#D4DFEB" font-family="Arial,Helvetica,sans-serif" font-size="19">Selección de proyectos y trabajo visual</text>
+<text x="27" y="146" fill="#D4DFEB" font-family="Arial,Helvetica,sans-serif" font-size="19">en una web personal.</text>
+<path d="M27 170h546" stroke="#29374A"/>
+<circle cx="33" cy="191" r="4" fill="#B9AAF3"/>
+<text x="47" y="197" fill="#AFC1D4" font-family="Arial,Helvetica,sans-serif" font-size="17">TypeScript  ·  React  ·  Tailwind</text>
+</svg>

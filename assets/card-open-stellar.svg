@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="218" viewBox="0 0 600 218" role="img" aria-labelledby="title desc">
+<title id="title">Open-Stellar</title><desc id="desc">Fork público de un bot con IA ejecutado sobre Cloudflare Workers. Fork.</desc>
+<rect x="1" y="1" width="598" height="216" rx="20" fill="#0E1726" stroke="#2A3B50" stroke-width="2"/>
+<path d="M20 2h155" stroke="#96A9F5" stroke-width="3" stroke-linecap="round"/>
+<rect x="24" y="24" width="55" height="55" rx="14" fill="#96A9F5" fill-opacity=".13" stroke="#96A9F5" stroke-opacity=".35"/>
+<g fill="none" stroke="#96A9F5" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m48 25 5.2 16 16.8 0-13.6 9.8 5.2 16L48 57l-13.6 9.8 5.2-16L26 41h16.8L48 25Z"/><circle cx="48" cy="48" r="24" stroke-dasharray="4 6"/></g>
+<text x="95" y="60" fill="#F4F7FB" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="30">Open-Stellar</text>
+<rect x="490" y="28" width="86" height="28" rx="14" fill="#96A9F5" fill-opacity=".12" stroke="#96A9F5" stroke-opacity=".5"/>
+<text x="533" y="47" text-anchor="middle" fill="#96A9F5" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700">Fork</text>
+<text x="27" y="119" fill="#D4DFEB" font-family="Arial,Helvetica,sans-serif" font-size="19">Fork público de un bot con IA ejecutado</text>
+<text x="27" y="146" fill="#D4DFEB" font-family="Arial,Helvetica,sans-serif" font-size="19">sobre Cloudflare Workers.</text>
+<path d="M27 170h546" stroke="#29374A"/>
+<circle cx="33" cy="191" r="4" fill="#96A9F5"/>
+<text x="47" y="197" fill="#AFC1D4" font-family="Arial,Helvetica,sans-serif" font-size="17">TypeScript  ·  Cloudflare Workers</text>
+</svg>

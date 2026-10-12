@@ -1,0 +1,76 @@
+{
+  "fetchedOn": "2026-10-12",
+  "groups": {
+    "own": [
+      "SkNesting",
+      "SkLed",
+      "Digital.A",
+      "OZPA",
+      "portafolio-web",
+      "foodgate-sushi-menu",
+      "Gimnexa"
+    ],
+    "openSource": [
+      "Open-Stellar",
+      "StellarGate"
+    ]
+  },
+  "repositories": {
+    "SkNesting": {
+      "TypeScript": 139068,
+      "CSS": 2086,
+      "HTML": 1651
+    },
+    "SkLed": {
+      "TypeScript": 234412,
+      "HTML": 355
+    },
+    "Digital.A": {
+      "JavaScript": 2576006,
+      "TypeScript": 1622490,
+      "CSS": 228119,
+      "PLpgSQL": 63011,
+      "HTML": 1308
+    },
+    "OZPA": {
+      "Java": 138496,
+      "CSS": 14536,
+      "PowerShell": 12851,
+      "PLpgSQL": 1354
+    },
+    "portafolio-web": {
+      "TypeScript": 29109,
+      "CSS": 15282,
+      "JavaScript": 2578,
+      "HTML": 850
+    },
+    "foodgate-sushi-menu": {
+      "JavaScript": 31118,
+      "CSS": 18592,
+      "HTML": 1221
+    },
+    "Gimnexa": {
+      "TypeScript": 1882982,
+      "PLpgSQL": 975873,
+      "CSS": 412677,
+      "JavaScript": 29045,
+      "PowerShell": 21806,
+      "Java": 10269,
+      "HTML": 1690
+    },
+    "Open-Stellar": {
+      "TypeScript": 1308838,
+      "JavaScript": 31322,
+      "Shell": 16078,
+      "CSS": 10138,
+      "Solidity": 3898,
+      "Rust": 3745,
+      "Dockerfile": 1547,
+      "PowerShell": 488
+    },
+    "StellarGate": {
+      "Rust": 101224,
+      "Dockerfile": 1216
+    }
+  }
+}

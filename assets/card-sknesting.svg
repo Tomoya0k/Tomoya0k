@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="218" viewBox="0 0 600 218" role="img" aria-labelledby="title desc">
+<title id="title">SkNesting</title><desc id="desc">Acomodo de piezas SVG y EPS en hojas, con giros, concavidades y agujeros. Público.</desc>
+<rect x="1" y="1" width="598" height="216" rx="20" fill="#0E1726" stroke="#2A3B50" stroke-width="2"/>
+<path d="M20 2h155" stroke="#51B7EF" stroke-width="3" stroke-linecap="round"/>
+<rect x="24" y="24" width="55" height="55" rx="14" fill="#51B7EF" fill-opacity=".13" stroke="#51B7EF" stroke-opacity=".35"/>
+<g fill="none" stroke="#51B7EF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M31 54 45 30l21 8-14 24-21-8Zm8-3 10-16m4 24 9-16"/></g>
+<text x="95" y="60" fill="#F4F7FB" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="30">SkNesting</text>
+<rect x="490" y="28" width="86" height="28" rx="14" fill="#51B7EF" fill-opacity=".12" stroke="#51B7EF" stroke-opacity=".5"/>
+<text x="533" y="47" text-anchor="middle" fill="#51B7EF" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700">Público</text>
+<text x="27" y="119" fill="#D4DFEB" font-family="Arial,Helvetica,sans-serif" font-size="19">Acomodo de piezas SVG y EPS en hojas,</text>
+<text x="27" y="146" fill="#D4DFEB" font-family="Arial,Helvetica,sans-serif" font-size="19">con giros, concavidades y agujeros.</text>
+<path d="M27 170h546" stroke="#29374A"/>
+<circle cx="33" cy="191" r="4" fill="#51B7EF"/>
+<text x="47" y="197" fill="#AFC1D4" font-family="Arial,Helvetica,sans-serif" font-size="17">TypeScript  ·  SVG  ·  Clipper</text>
+</svg>

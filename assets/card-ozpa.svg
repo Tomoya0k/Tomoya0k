@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="218" viewBox="0 0 600 218" role="img" aria-labelledby="title desc">
+<title id="title">OZPA</title><desc id="desc">Gestión de clientes y expedientes con escritorio, API y base de datos. Privado.</desc>
+<rect x="1" y="1" width="598" height="216" rx="20" fill="#0E1726" stroke="#2A3B50" stroke-width="2"/>
+<path d="M20 2h155" stroke="#79D4C4" stroke-width="3" stroke-linecap="round"/>
+<rect x="24" y="24" width="55" height="55" rx="14" fill="#79D4C4" fill-opacity=".13" stroke="#79D4C4" stroke-opacity=".35"/>
+<g fill="none" stroke="#79D4C4" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M29 37h15l4 5h19v20H29V37Zm8-6h22v11"/><path d="M38 50h20m-20 6h15"/></g>
+<text x="95" y="60" fill="#F4F7FB" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="30">OZPA</text>
+<rect x="490" y="28" width="86" height="28" rx="14" fill="#79D4C4" fill-opacity=".12" stroke="#79D4C4" stroke-opacity=".5"/>
+<text x="533" y="47" text-anchor="middle" fill="#79D4C4" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700">Privado</text>
+<text x="27" y="119" fill="#D4DFEB" font-family="Arial,Helvetica,sans-serif" font-size="19">Gestión de clientes y expedientes con</text>
+<text x="27" y="146" fill="#D4DFEB" font-family="Arial,Helvetica,sans-serif" font-size="19">escritorio, API y base de datos.</text>
+<path d="M27 170h546" stroke="#29374A"/>
+<circle cx="33" cy="191" r="4" fill="#79D4C4"/>
+<text x="47" y="197" fill="#AFC1D4" font-family="Arial,Helvetica,sans-serif" font-size="17">Java  ·  JavaFX  ·  Spring Boot</text>
+</svg>

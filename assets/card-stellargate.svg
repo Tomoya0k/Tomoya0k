@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="218" viewBox="0 0 600 218" role="img" aria-labelledby="title desc">
+<title id="title">StellarGate</title><desc id="desc">Fork público de una pasarela de pagos para la red Stellar. Fork.</desc>
+<rect x="1" y="1" width="598" height="216" rx="20" fill="#0E1726" stroke="#2A3B50" stroke-width="2"/>
+<path d="M20 2h155" stroke="#D8BC87" stroke-width="3" stroke-linecap="round"/>
+<rect x="24" y="24" width="55" height="55" rx="14" fill="#D8BC87" fill-opacity=".13" stroke="#D8BC87" stroke-opacity=".35"/>
+<g fill="none" stroke="#D8BC87" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="48" cy="48" r="18"/><path d="M37 43h25m-28 9h25m-5-16 8 7-8 7"/></g>
+<text x="95" y="60" fill="#F4F7FB" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="30">StellarGate</text>
+<rect x="490" y="28" width="86" height="28" rx="14" fill="#D8BC87" fill-opacity=".12" stroke="#D8BC87" stroke-opacity=".5"/>
+<text x="533" y="47" text-anchor="middle" fill="#D8BC87" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700">Fork</text>
+<text x="27" y="119" fill="#D4DFEB" font-family="Arial,Helvetica,sans-serif" font-size="19">Fork público de una pasarela de pagos</text>
+<text x="27" y="146" fill="#D4DFEB" font-family="Arial,Helvetica,sans-serif" font-size="19">para la red Stellar.</text>
+<path d="M27 170h546" stroke="#29374A"/>
+<circle cx="33" cy="191" r="4" fill="#D8BC87"/>
+<text x="47" y="197" fill="#AFC1D4" font-family="Arial,Helvetica,sans-serif" font-size="17">Rust  ·  Axum  ·  SQLite</text>
+</svg>
